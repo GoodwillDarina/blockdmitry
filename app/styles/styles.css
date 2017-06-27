@@ -373,7 +373,7 @@
   color: #fff;
 }
 .page-main {
-  padding: 120px 0 20px;
+  padding: 115px 0 20px;
 }
 .page-main > * {
   padding: 10px 15px;
@@ -402,12 +402,9 @@
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
-@media screen and (max-width: 800px) {
-  .page-header {
-    position: relative;
-  }
+@media screen and (max-width: 490px) {
   .page-main {
-    padding-top: 0;
+    padding-top: 195px;
   }
 }
 .header {

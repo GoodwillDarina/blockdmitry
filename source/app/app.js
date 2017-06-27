@@ -3,9 +3,11 @@ require('angular-animate');
 require('angular-scroll');
 require('angular-touch');
 
+var offsetTop = 115;
+
 var app = angular.module('nApp', ['ngAnimate', 'ui.bootstrap', 'duScroll']);
 app.controller('landingCtrl', [
-    '$scope', '$document', '$interval', 'Util', function ($scope, $document,$interval, Util) {
+    '$scope', '$window', '$interval', 'Util', function ($scope, $window, $interval, Util) {
         $scope.toggleMenu = toggleMenu;
         $scope.isOpenMenu = false;
         $scope.countdown = {"days": "", "hours": "", "minutes":"", "seconds": ""};
@@ -29,7 +31,9 @@ app.controller('landingCtrl', [
 
         }, 1000);
 
-    }]).value('duScrollOffset', 140);
+
+
+    }]).value('duScrollOffset', offsetTop);
 
 app.factory('Util', [
     function() {
