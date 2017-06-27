@@ -29,7 +29,7 @@ app.controller('landingCtrl', [
 
         }, 1000);
 
-    }]).value('duScrollOffset', 153);
+    }]).value('duScrollOffset', 140);
 
 app.factory('Util', [
     function() {

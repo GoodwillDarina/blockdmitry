@@ -1,17 +1,19 @@
 .header {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  background: transparent;
+  //box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 .header-top {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 15px;
+  padding: 15px 15px 0;
   flex-wrap: wrap;
+  background: linear-gradient( #1d5468 30%, #2b5f71 60%);
 }
 .header-bottom {
   display: flex;
   align-items: center;
-  height: 60px;
+  height: 50px;
   padding: 0 15px;
   background: transparent url('../images/followingTopBg.png') repeat-x 0 100%;
 }
@@ -20,7 +22,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
   a {
     display: inline-block;
     margin: 0 10px;
@@ -104,8 +106,14 @@
     font-weight: normal;
     color: #fff;
     border-radius: 3px;
+    background: transparent;
+    touch-action: none;
 
-    &:hover, &.active {
+    &:hover {
+      background: transparent;
+      text-decoration: none;
+    }
+    &.active {
       background: #f0bf00;
       text-decoration: none;
     }
@@ -185,5 +193,16 @@
   }
   .header-menu__list {
     margin-top: 20px;
+  }
+}
+
+@media (hover: hover) {
+  .header-menu__list-item {
+    a {
+      &:hover, &.active {
+        background: #f0bf00;
+        text-decoration: none;
+      }
+    }
   }
 }
