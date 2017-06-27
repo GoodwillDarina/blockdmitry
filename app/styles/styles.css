@@ -402,7 +402,7 @@
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 400px) {
   .page-main {
     padding-top: 195px;
   }
