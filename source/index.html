@@ -38,7 +38,10 @@
                         <a href="" ng-click="toggleMenu()">Menu</a>
                     </div>
                 </div>
-                <nav class="header-menu" ng-class="{'is-show-mobile': isOpenMenu}">
+                <p class="header-description is-mobile">
+                    Blockchain multiplayer game based on soccer results predition
+                </p>
+                <nav class="header-menu" ng-class="{'is-show': isOpenMenu}">
                     <ul class="header-menu__list">
                         <li class="header-menu__list-item">
                             <a href="#block-1" du-smooth-scroll du-scrollspy>Block #1</a>
@@ -47,10 +50,10 @@
                             <a href="#block-2" du-smooth-scroll du-scrollspy>Block #2</a>
                         </li>
                     </ul>
-                </nav>
+                </nav >
             </section>
             <section class="header-bottom">
-                <p class="header-description">
+                <p class="header-description is-not-mobile">
                     Blockchain multiplayer game based on soccer results predition
                 </p>
             </section>
