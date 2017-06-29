@@ -381,7 +381,7 @@
   transition: padding 0.25s linear;
 }
 .page-main > * {
-  padding: 10px 15px;
+  padding: 10px 0;
 }
 .page-main h2 {
   text-align: center;
