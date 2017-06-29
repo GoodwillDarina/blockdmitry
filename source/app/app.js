@@ -10,7 +10,7 @@ app.controller('landingCtrl', [
     '$scope', '$window', '$interval', 'Util', function ($scope, $window, $interval, Util) {
         $scope.toggleMenu = toggleMenu;
         $scope.isOpenMenu = false;
-        $scope.countdown = {"days": "", "hours": "", "minutes":"", "seconds": ""};
+        $scope.countdown = {'days': '', 'hours': '', 'minutes':'', 'seconds': ''};
 
         function toggleMenu() {
             console.log('toggle');
@@ -52,3 +52,90 @@ app.factory('Util', [
         };
     }
 ]);
+app.directive('scrollFixed', [function() {
+    return {
+        restrict: 'A',
+        link: function (scope, element, attrs) {
+            scope.element = element[0];
+            scope.scrollContent = document.querySelector('.page-main');
+            scope.window = window;
+
+            offsetTop = scope.element.offsetHeight - 5;
+            scope.scrollContent.style.paddingTop = (scope.element.offsetHeight - 5) + 'px';
+
+            window.onresize = function() {
+                offsetTop = scope.element.offsetHeight - 5;
+                scope.scrollContent.style.paddingTop = (scope.element.offsetHeight - 5) + 'px';
+            };
+
+            scope.window.onscroll = function() {
+                 if (scope.window.pageYOffset > (scope.element.offsetHeight - 40) && !scope.element.classList.contains('is-scroll-hide')) {
+                     scope.element.classList.add('is-scroll-hide');
+                 } else if (scope.window.pageYOffset <= (scope.element.offsetHeight - 40) && scope.element.classList.contains('is-scroll-hide')) {
+                     scope.element.classList.remove('is-scroll-hide');
+                 }
+            };
+
+        }
+    };
+
+}]);
+
+
+app.directive('sidebarToggle', [function() {
+    return {
+        restrict: 'A',
+        link: function (scope, element, attrs) {
+            scope.element = element[0];
+            scope.body = document.body;
+            scope.element.addEventListener('click', function() {
+                var _element = document.getElementById(attrs.sidebarToggle);
+                _element.classList.toggle('sidebar--is-open');
+                var _bgSidebar = document.getElementById(attrs.sidebarToggle + '-bg');
+                _bgSidebar.classList.toggle('sidebar-bg--is-visible');
+
+                //control body
+                if (scope.body.style.overflowY == 'hidden') {
+                    scope.body.style.overflowY = 'auto';
+                } else {
+                    scope.body.style.overflowY = 'hidden';
+                }
+            });
+
+        }
+    };
+}]);
+app.directive('sidebar', ['$compile', function($compile) {
+    return {
+        restrict: 'E',
+        link: function (scope, element, attrs) {
+            scope.body = document.body;
+            scope.element = element[0];
+            //renderize sidebar
+            scope.element.style.display = 'block';
+
+            //add width on sidebar
+            function isNumber(n) {
+                return !isNaN(parseFloat(n)) && isFinite(n);
+            }
+
+            if (isNumber(attrs.size)) {
+                scope.element.style.maxWidth = attrs.size + 'px';
+            } else {
+                scope.element.style.maxWidth = attrs.size;
+            }
+
+            //add class to position on sidebar
+            scope.element.classList.add('sidebar--' + attrs.position);
+
+            //renderize bg-sidebar
+            var bgSidebar = document.createElement('div');
+            bgSidebar.setAttribute('class', 'sidebar-bg');
+            bgSidebar.setAttribute('id', attrs.id + '-bg');
+            bgSidebar.setAttribute('sidebar-toggle', attrs.id);
+            scope.body.appendChild(bgSidebar);
+
+            $compile(bgSidebar)(scope);
+        }
+    };
+}]);
