@@ -3,7 +3,7 @@ require('angular-animate');
 require('angular-scroll');
 require('angular-touch');
 
-var offsetTop = 115;
+var offsetTop = 125;
 
 var app = angular.module('nApp', ['ngAnimate', 'ui.bootstrap', 'duScroll']);
 app.controller('landingCtrl', [
@@ -60,18 +60,10 @@ app.directive('scrollFixed', [function() {
             scope.scrollContent = document.querySelector('.page-main');
             scope.window = window;
 
-            offsetTop = scope.element.offsetHeight - 5;
-            scope.scrollContent.style.paddingTop = (scope.element.offsetHeight - 5) + 'px';
-
-            window.onresize = function() {
-                offsetTop = scope.element.offsetHeight - 5;
-                scope.scrollContent.style.paddingTop = (scope.element.offsetHeight - 5) + 'px';
-            };
-
             scope.window.onscroll = function() {
-                 if (scope.window.pageYOffset > (scope.element.offsetHeight - 40) && !scope.element.classList.contains('is-scroll-hide')) {
+                 if (scope.window.pageYOffset > (scope.element.offsetHeight - 20) && !scope.element.classList.contains('is-scroll-hide')) {
                      scope.element.classList.add('is-scroll-hide');
-                 } else if (scope.window.pageYOffset <= (scope.element.offsetHeight - 40) && scope.element.classList.contains('is-scroll-hide')) {
+                 } else if (scope.window.pageYOffset <= (scope.element.offsetHeight - 20) && scope.element.classList.contains('is-scroll-hide')) {
                      scope.element.classList.remove('is-scroll-hide');
                  }
             };
