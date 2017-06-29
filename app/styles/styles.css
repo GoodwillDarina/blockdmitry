@@ -494,6 +494,7 @@
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  margin-bottom: 3px;
 }
 .header-logo a {
   display: inline-block;
@@ -703,6 +704,7 @@
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
     text-align: right;
+    line-height: 0;
   }
   .header-menu-btn {
     position: relative;
@@ -1110,10 +1112,10 @@ p.big-text + p.big-text {
 }
 .video-container {
   padding: 20px 0;
-  background: #194522 url("../images/video-bg.jpg") no-repeat center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
+  background: #101a12 url("../images/video-bg.jpg") no-repeat center 0;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
 }
 .video-container h2 {
   color: #fff;
