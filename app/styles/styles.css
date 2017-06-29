@@ -863,7 +863,7 @@
 @media (hover: hover) {
   .header-menu__list-item a:hover,
   .header-menu__list-item a.active {
-    background: #f0bf00;
+    border-bottom-color: #f0bf00;
     text-decoration: none;
   }
   .header-menu-btn:hover {
