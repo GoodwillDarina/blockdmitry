@@ -46,182 +46,181 @@
         </nav >
     </sidebar>
     <div class="page-wrap">
-            <div class="page-content" ng-controller="landingCtrl">
-                <header class="page-header header" scroll-fixed>
-                    <section class="header-top">
-                        <h2 class="header-logo">
-                            <a href="#video" du-smooth-scroll du-scrollspy>SoccerChain</a>
-                        </h2>
-                        <ul class="header-social">
-                            <li class="header-social__item">
-                                <div data-href="https://goodwilldarina.github.io/blockdmitry/app/index.html" data-layout="button" data-size="small" data-mobile-iframe="false">
-                                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgoodwilldarina.github.io%2Fblockdmitry%2Fapp%2Findex.html&amp;src=sdkpreparse">facebook</a>
-                                </div>
+        <div class="page-content" ng-controller="landingCtrl">
+            <header class="page-header header" scroll-fixed>
+                <section class="header-top">
+                    <h2 class="header-logo">
+                        <a href="#video" du-smooth-scroll du-scrollspy>SoccerChain</a>
+                    </h2>
+                    <ul class="header-social">
+                        <li class="header-social__item">
+                            <div data-href="https://goodwilldarina.github.io/blockdmitry/app/index.html" data-layout="button" data-size="small" data-mobile-iframe="false">
+                                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgoodwilldarina.github.io%2Fblockdmitry%2Fapp%2Findex.html&amp;src=sdkpreparse">facebook</a>
+                            </div>
+                        </li>
+                        <li class="header-social__item">
+                            <a class="twitter-share-button"
+                               href="https://twitter.com/intent/tweet?text=Hello%20world" target="_blank">
+                                Tweet</a>
+                        </li>
+                    </ul>
+                    <div class="header-menu-mobile">
+                        <div class="header-menu-btn">
+                            <a sidebar-toggle="sidebar-menu">Menu</a>
+                        </div>
+                    </div>
+                    <p class="header-description is-mobile hidden-scroll">
+                        SoccerChain multiplayer game based on soccer results predition
+                    </p>
+                    <nav class="header-menu is-not-mobile">
+                        <ul class="header-menu__list" du-spy-context>
+                            <li class="header-menu__list-item">
+                                <a href="#block-1" du-smooth-scroll du-scrollspy>Block #1</a>
                             </li>
-                            <li class="header-social__item">
-                                <a class="twitter-share-button"
-                                   href="https://twitter.com/intent/tweet?text=Hello%20world" target="_blank">
-                                    Tweet</a>
+                            <li class="header-menu__list-item">
+                                <a href="#block-2" du-smooth-scroll du-scrollspy>Block #2</a>
                             </li>
                         </ul>
-                        <div class="header-menu-mobile">
-                            <div class="header-menu-btn">
-                                <a sidebar-toggle="sidebar-menu">Menu</a>
-                            </div>
+                    </nav >
+                </section>
+                <section class="header-bottom">
+                    <p class="header-description is-not-mobile hidden-scroll">
+                        SoccerChain multiplayer game based on soccer results predition
+                    </p>
+                </section>
+            </header>
+            <main class="page-main">
+                <section class="video-container" id="video">
+                    <article class="counter">
+                        <div class="counter-item">{{countdown.days}}</div>
+                        <div class="counter-item">{{countdown.hours}}</div>
+                        <div class="counter-item">{{countdown.minutes}}</div>
+                        <div class="counter-item">{{countdown.seconds}}</div>
+                    </article>
+                    <h2>Видео Блок</h2>
+                    <div class="video-row row">
+                        <div class="video-item col-md-6 col-sm-12">
+                            <iframe width="100%"
+                                    height="200"
+                                    src="https://www.youtube.com/embed/mJ_fkw5j-t0"
+                                    frameborder="0"
+                                    allowfullscreen></iframe>
+                            <p class="video-title">Video #1</p>
                         </div>
-                        <p class="header-description is-mobile hidden-scroll">
-                            SoccerChain multiplayer game based on soccer results predition
-                        </p>
-                        <nav class="header-menu is-not-mobile">
-                            <ul class="header-menu__list" du-spy-context>
-                                <li class="header-menu__list-item">
-                                    <a href="#block-1" du-smooth-scroll du-scrollspy>Block #1</a>
-                                </li>
-                                <li class="header-menu__list-item">
-                                    <a href="#block-2" du-smooth-scroll du-scrollspy>Block #2</a>
-                                </li>
-                            </ul>
-                        </nav >
-                    </section>
-                    <section class="header-bottom">
-                        <p class="header-description is-not-mobile hidden-scroll">
-                            SoccerChain multiplayer game based on soccer results predition
-                        </p>
-                    </section>
-                </header>
-                <main class="page-main">
-                    <section class="video-container" id="video">
-                        <article class="counter">
-                            <div class="counter-item">{{countdown.days}}</div>
-                            <div class="counter-item">{{countdown.hours}}</div>
-                            <div class="counter-item">{{countdown.minutes}}</div>
-                            <div class="counter-item">{{countdown.seconds}}</div>
-                        </article>
-                        <h2>Видео Блок</h2>
-                        <div class="video-row row">
-                            <div class="video-item col-md-6 col-sm-12">
-                                <iframe width="100%"
-                                        height="200"
-                                        src="https://www.youtube.com/embed/mJ_fkw5j-t0"
-                                        frameborder="0"
-                                        allowfullscreen></iframe>
-                                <p class="video-title">Video #1</p>
-                            </div>
-                            <div class="video-item col-md-6 col-sm-12">
-                                <iframe width="100%"
-                                        height="200"
-                                        src="https://www.youtube.com/embed/mJ_fkw5j-t0"
-                                        frameborder="0"
-                                        allowfullscreen></iframe>
-                                <p class="video-title">Video #2</p>
-                            </div>
+                        <div class="video-item col-md-6 col-sm-12">
+                            <iframe width="100%"
+                                    height="200"
+                                    src="https://www.youtube.com/embed/mJ_fkw5j-t0"
+                                    frameborder="0"
+                                    allowfullscreen></iframe>
+                            <p class="video-title">Video #2</p>
                         </div>
-                        <div class="video-row row">
-                            <div class="video-item col-md-6 col-sm-12">
-                                <iframe width="100%"
-                                        height="200"
-                                        src="https://www.youtube.com/embed/mJ_fkw5j-t0"
-                                        frameborder="0"
-                                        allowfullscreen></iframe>
-                                <p class="video-title">Video #3</p>
-                            </div>
-                            <div class="video-item col-md-6 col-sm-12">
-                                <iframe width="100%"
-                                        height="200"
-                                        src="https://www.youtube.com/embed/mJ_fkw5j-t0"
-                                        frameborder="0"
-                                        allowfullscreen></iframe>
-                                <p class="video-title">Video #4</p>
-                            </div>
+                    </div>
+                    <div class="video-row row">
+                        <div class="video-item col-md-6 col-sm-12">
+                            <iframe width="100%"
+                                    height="200"
+                                    src="https://www.youtube.com/embed/mJ_fkw5j-t0"
+                                    frameborder="0"
+                                    allowfullscreen></iframe>
+                            <p class="video-title">Video #3</p>
                         </div>
-                    </section>
-                    <section class="block-1" id="block-1">
-                        <h2>Block #1</h2>
-                        <div class="row">
-                            <div class="token-cap col-md-5 col-sm-12">
-                                <p class="title">Token Cap</p>
+                        <div class="video-item col-md-6 col-sm-12">
+                            <iframe width="100%"
+                                    height="200"
+                                    src="https://www.youtube.com/embed/mJ_fkw5j-t0"
+                                    frameborder="0"
+                                    allowfullscreen></iframe>
+                            <p class="video-title">Video #4</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="block-1" id="block-1">
+                    <h2>Block #1</h2>
+                    <div class="row">
+                        <div class="token-cap col-md-5 col-sm-12">
+                            <p class="title">Token Cap</p>
 
-                                <p class="big-text">117 337 ETH</p>
-                                <p class="big-text">41 MLN USD</p>
+                            <p class="big-text">117 337 ETH</p>
+                            <p class="big-text">41 MLN USD</p>
 
-                                <div class="color-block">
-                                    <div>
-                                        <span>Current rate: </span>
-                                        <span class="info">i</span>
-                                    </div>
-                                    <div>
-                                        <span>1 EHT = 2824 SNM</span>
-                                        <span>1 USD = 8 SNM</span>
-                                    </div>
+                            <div class="color-block">
+                                <div>
+                                    <span>Current rate: </span>
+                                    <span class="info">i</span>
+                                </div>
+                                <div>
+                                    <span>1 EHT = 2824 SNM</span>
+                                    <span>1 USD = 8 SNM</span>
                                 </div>
                             </div>
-                            <div class="total-amount col-md-7 col-sm-12">
-                                <p class="title">total amount of tokens issued on ico:</p>
-
-                                <p class="big-text">331.360.000 SNM</p>
-
-                                <p>
-                                    Значимость этих проблем настолько очевидна, что консультация с широким активом способствует
-                                    подготовки и
-                                    реализации модели развития. Равным образом дальнейшее развитие различных форм деятельности
-                                    позволяет
-                                    выполнять важные задания по разработке направлений прогрессивного развития. Равным образом
-                                    постоянный
-                                    количественный рост и сфера нашей активности способствует подготовки и реализации
-                                    соответствующий
-                                    условий активизации.
-                                </p>
-
-                                <p>
-                                    Равным образом рамки и место обучения кадров позволяет выполнять важные задания по
-                                    разработке форм
-                                    развития <a href>link</a>
-                                </p>
-                            </div>
                         </div>
-                    </section>
-                    <section class="block-2" id="block-2">
-                        <h2>Блок №2</h2>
-                        <div class="row">
-                            <p class="col-md-12">
-                                Равным образом рамки и место обучения кадров позволяет выполнять важные задания по разработке форм
-                                развития.
+                        <div class="total-amount col-md-7 col-sm-12">
+                            <p class="title">total amount of tokens issued on ico:</p>
+
+                            <p class="big-text">331.360.000 SNM</p>
+
+                            <p>
                                 Значимость этих проблем настолько очевидна, что консультация с широким активом способствует
                                 подготовки и
-                                реализации модели развития. Равным образом дальнейшее развитие различных форм деятельности позволяет
+                                реализации модели развития. Равным образом дальнейшее развитие различных форм деятельности
+                                позволяет
                                 выполнять важные задания по разработке направлений прогрессивного развития. Равным образом
                                 постоянный
-                                количественный рост и сфера нашей активности способствует подготовки и реализации соответствующий
+                                количественный рост и сфера нашей активности способствует подготовки и реализации
+                                соответствующий
                                 условий активизации.
                             </p>
 
-                            <p class="col-md-12">
-                                Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности
-                                представляет
-                                собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям.
-                                Повседневная практика показывает, что консультация с широким активом способствует подготовки и
-                                реализации
-                                позиций, занимаемых участниками в отношении поставленных задач. Равным образом укрепление и развитие
-                                структуры представляет собой интересный эксперимент проверки позиций, занимаемых участниками в
-                                отношении
-                                поставленных задач. Равным образом сложившаяся структура организации обеспечивает широкому кругу
-                                (специалистов) участие в формировании форм развития. Повседневная практика показывает, что
-                                реализация
-                                намеченных плановых заданий влечет за собой процесс внедрения и модернизации модели развития.
-                                Повседневная
-                                практика показывает, что постоянный количественный рост и сфера нашей активности обеспечивает
-                                широкому
-                                кругу
-                                (специалистов) участие в формировании дальнейших направлений развития.
+                            <p>
+                                Равным образом рамки и место обучения кадров позволяет выполнять важные задания по
+                                разработке форм
+                                развития <a href>link</a>
                             </p>
                         </div>
-                    </section>
-                </main>
-            </div>
-            <footer class="page-footer">
-                <small>&copy; 2014 BetFlock. All rights reserved.</small>
-            </footer>
+                    </div>
+                </section>
+                <section class="block-2" id="block-2">
+                    <h2>Блок №2</h2>
+                    <div class="row">
+                        <p class="col-md-12">
+                            Равным образом рамки и место обучения кадров позволяет выполнять важные задания по разработке форм
+                            развития.
+                            Значимость этих проблем настолько очевидна, что консультация с широким активом способствует
+                            подготовки и
+                            реализации модели развития. Равным образом дальнейшее развитие различных форм деятельности позволяет
+                            выполнять важные задания по разработке направлений прогрессивного развития. Равным образом
+                            постоянный
+                            количественный рост и сфера нашей активности способствует подготовки и реализации соответствующий
+                            условий активизации.
+                        </p>
+
+                        <p class="col-md-12">
+                            Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности
+                            представляет
+                            собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям.
+                            Повседневная практика показывает, что консультация с широким активом способствует подготовки и
+                            реализации
+                            позиций, занимаемых участниками в отношении поставленных задач. Равным образом укрепление и развитие
+                            структуры представляет собой интересный эксперимент проверки позиций, занимаемых участниками в
+                            отношении
+                            поставленных задач. Равным образом сложившаяся структура организации обеспечивает широкому кругу
+                            (специалистов) участие в формировании форм развития. Повседневная практика показывает, что
+                            реализация
+                            намеченных плановых заданий влечет за собой процесс внедрения и модернизации модели развития.
+                            Повседневная
+                            практика показывает, что постоянный количественный рост и сфера нашей активности обеспечивает
+                            широкому
+                            кругу
+                            (специалистов) участие в формировании дальнейших направлений развития.
+                        </p>
+                    </div>
+                </section>
+            </main>
         </div>
+        <footer class="page-footer">
+            <small>&copy; 2014 BetFlock. All rights reserved.</small>
+        </footer>
     </div>
 <script src="./libs/angular.min.js"></script>
 <script src="./app.js"></script>

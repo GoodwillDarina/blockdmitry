@@ -1112,7 +1112,7 @@ p.big-text + p.big-text {
 }
 .video-container {
   padding: 20px 0;
-  background: #101a12 url("../images/video-bg.jpg") no-repeat center 0;
+  background: #0f1e13 url("../images/video-bg.jpg") no-repeat center 0;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   background-size: contain;
